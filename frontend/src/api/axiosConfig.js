@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create base instance
 const API = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '', // Empty for relative (Vite proxy)
+  baseURL: import.meta.env.VITE_API_URL || 'https://amazon-clone-scaler-ai.onrender.com', 
 });
 
 // Request interceptor for auth

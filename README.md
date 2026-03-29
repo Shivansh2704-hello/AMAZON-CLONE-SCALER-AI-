@@ -16,6 +16,7 @@ A fully functional, stylized Amazon.in clone built with React, Node.js, and MySQ
 - **Frontend**: React, React Router, Lucide-react (Icons), Axios (API calls), Custom CSS (BEM-style).
 - **Backend Service**: Node.js, Express, JWT (Security), REST API.
 - **Production Database**: Cloud-hosted MySQL on Railway (`hopper.proxy.rlwy.net`).
+- **Live Backend Endpoint**: `https://amazon-clone-scaler-ai.onrender.com`
 - **Media**: Localized high-fidelity product images and AI-generated assets.
 
 ## 🚀 Setup Instructions
