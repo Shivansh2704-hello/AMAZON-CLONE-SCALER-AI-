@@ -1,0 +1,207 @@
+.product-card {
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 0.2s;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.product-card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.product-card__img-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px;
+  background: #f7f8f8;
+  height: 200px;
+  width: 100%;
+}
+
+.product-card__img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s;
+}
+
+.product-card:hover .product-card__img {
+  transform: scale(1.05);
+}
+
+.product-card__body {
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.product-card__title {
+  font-size: 14px;
+  font-weight: 500;
+  color: #0F1111;
+  text-decoration: none;
+  line-height: 1.4;
+  margin-bottom: 4px;
+  line-clamp: 2;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 40px;
+}
+.product-card__title:hover {
+  color: #c45500;
+  text-decoration: underline;
+}
+
+.product-card__rating {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  margin-bottom: 4px;
+}
+
+.stars {
+  color: #ffa41c;
+  font-size: 14px;
+}
+
+.product-card__rating-count {
+  font-size: 12px;
+  color: #007185;
+}
+
+.product-card__price {
+  font-size: 20px;
+  font-weight: 500;
+  color: #0F1111;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.product-card__price-symbol {
+  font-size: 11px;
+  margin-top: 4px;
+  margin-right: 2px;
+}
+
+.product-card__low-stock {
+  font-size: 12px;
+  color: #B12704;
+  margin-bottom: 8px;
+}
+
+.product-card__out-of-stock {
+  font-size: 12px;
+  color: #565959;
+  margin-bottom: 8px;
+}
+
+.btn-primary {
+  width: 100%;
+  padding: 6px;
+  background: #ffd814;
+  border: 1px solid #fcd200;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: auto;
+}
+
+.btn-primary:hover {
+  background: #f7ca00;
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.btn-success-green {
+  background-color: #067D62 !important;
+  border-color: #005f4b !important;
+  color: white !important;
+  cursor: default !important;
+  opacity: 1 !important;
+}
+
+.btn-buy-now {
+  width: 100%;
+  padding: 6px;
+  background: #ffa41c;
+  border: 1px solid #ff8f00;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.btn-buy-now:hover:not(:disabled) {
+  background: #fa8914;
+}
+
+.btn-buy-now:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Quantity Selector Pills */
+.product-card__qty-selector {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  border: 1px solid #ffd814;
+  border-radius: 20px;
+  height: 32px;
+  padding: 0 4px;
+  margin-top: auto;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+}
+
+.qty-btn {
+  background: white;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #0F1111;
+  transition: background 0.2s;
+}
+
+.qty-btn:hover:not(:disabled) {
+  background: #f0f2f2;
+}
+
+.qty-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.qty-val {
+  font-weight: 700;
+  font-size: 14px;
+  color: #0F1111;
+  min-width: 30px;
+  text-align: center;
+}
