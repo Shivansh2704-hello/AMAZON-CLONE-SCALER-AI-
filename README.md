@@ -14,29 +14,26 @@ A fully functional, stylized Amazon.in clone built with React, Node.js, and MySQ
 ## 🛠️ Tech Stack
 
 - **Frontend**: React, React Router, Lucide-react (Icons), Axios (API calls), Custom CSS (BEM-style).
-- **Backend**: Node.js, Express, MySQL (Database), JWT (Security).
-- **Styling**: Pure CSS was used to replace non-functional Tailwind classes, ensuring a high-fidelity recreation of the Amazon design system.
+- **Backend Service**: Node.js, Express, JWT (Security), REST API.
+- **Production Database**: Cloud-hosted MySQL on Railway (`hopper.proxy.rlwy.net`).
+- **Media**: Localized high-fidelity product images and AI-generated assets.
 
 ## 🚀 Setup Instructions
 
 ### Prerequisites
 - Node.js (v16+)
-- MySQL Server
+- Railway CLI (for cloud database metrics)
 
 ### 1. Database Configuration
-1. Create a database named `amazon_clone`.
-2. Seed the database with the provided sample data (see `backend/config/seed.sql` if available, or use the automatic seeding logic in the backend).
+1. The project is currently configured to connect to the **Railway Cloud Database**. 
+2. Connection variables are defined in the `backend/.env` file. 
+3. Seeding logic has been executed to migrate products and categories to the cloud.
 
 ### 2. Backend Setup
 ```bash
 cd backend
 npm install
-# Create a .env file with the following:
-# DB_HOST=localhost
-# DB_USER=root
-# DB_PASSWORD=your_password
-# DB_NAME=amazon_clone
-# JWT_SECRET=your_jwt_secret
+# Ensure .env is updated with Railway credentials
 npm run dev
 ```
 
@@ -49,6 +46,7 @@ npm run dev
 
 ## 📝 Assumptions & Notes
 
-- **Default User**: The app bypasses the login screen and automatically authenticates a "Test User" using a mock-admin-token. This allows immediate access to the cart and checkout features as per project requirements.
-- **Sample Data**: The product database is assumed to be pre-populated with diverse categories (Electronics, Clothing, Home & Kitchen, etc.) to showcase filtering.
-- **CSS Architecture**: BEM (Block Element Modifier) methodology was adopted for the custom CSS to ensure maintainability and eliminate dependencies on external utility frameworks.
+- **Cloud Integration**: The database has been successfully migrated from localhost to Railway to support production accessibility. 
+- **Media Assets**: All product images have been remapped to high-quality local files within the `frontend/public/images/products` directory, ensuring consistent 24/7 rendering without external dependencies.
+- **Default User**: The app bypasses the login screen and automatically authenticates a "Test User" using a mock-admin-token for testing the cart and checkout features.
+- **Performance Note**: Please be advised that certain application features and data retrieval operations may experience latency. This is due to the current utilization of a cloud-hosted MySQL database on a distributed service (Railway), which prioritizes global accessibility over localized response speed.

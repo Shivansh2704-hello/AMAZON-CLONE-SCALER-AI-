@@ -3,10 +3,6 @@
 -- Run this file to reset and recreate everything
 -- ============================================
 
-DROP DATABASE IF EXISTS amazon_clone;
-CREATE DATABASE amazon_clone;
-USE amazon_clone;
-
 -- 1. Users
 CREATE TABLE users (
     id INT AUTO_INCREMENT PRIMARY KEY,
