@@ -16,6 +16,7 @@ app.use((req, res, next) => {
 });
 
 // --- Routes ---
+app.get('/', (req, res) => res.send('API is running (Amazon Clone Backend)'));
 app.get('/api/health', (req, res) => res.json({ success: true, message: 'Server is running' }));
 app.use('/api/products', require('./routes/productRoutes'));
 app.use('/api/cart', require('./routes/cartRoutes'));
